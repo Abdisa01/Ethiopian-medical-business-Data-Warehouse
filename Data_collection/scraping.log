@@ -1,0 +1,4 @@
+INFO:root:Starting scraping process
+INFO:root:Data cleaning completed
+ERROR:root:An error occurred while scraping
+INFO:root:DBT transformation completed successfully
