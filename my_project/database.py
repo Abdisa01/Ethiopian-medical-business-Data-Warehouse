@@ -1,6 +1,7 @@
 # database.py
 from sqlalchemy import create_engine, Column, Integer, String, Text, TIMESTAMP
-from sqlalchemy.ext.declarative import declarative_base
+#from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = "postgresql://postgres:123@localhost:5432/Medical_data"

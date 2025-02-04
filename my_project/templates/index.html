@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Medical Data Records</h1>
+    
+    {% if data %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Channel Title</th>
+                <th>Channel Username</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Media Path</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data %}
+            <tr>
+                <td>{{ record.id }}</td>
+                <td>{{ record.channel_title }}</td>
+                <td>{{ record.channel_username }}</td>
+                <td>{{ record.message }}</td>
+                <td>{{ record.date }}</td>
+                <td>{{ record.mediapath }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No data available</p>
+    {% endif %}
+
+</body>
+</html>
